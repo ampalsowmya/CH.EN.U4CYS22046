@@ -1,0 +1,153 @@
+
+body {
+    background-image: url("https://img.freepik.com/free-photo/top-view-carnival-mask-with-glitter-feathers_23-2148798913.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+    text-align: center;
+    background-color: #003366;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+        border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    border: 2px solid white;
+    background-color: #003366;
+}
+
+.item{
+  border: 2px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+button:hover {
+    background-color:#ACC8E5;
+    color: #112A46;
+
+}
+#sd{
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+button.remove-button:hover {
+    background-color: #ACC8E5;
+    color: #112A46;
+
+}
+ #vi{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .form-group {
+        background-color:#003366 ;
+        color: white;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+
+        max-width: 80%;
+        margin: 0 10px;
+
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+
+      }
+      #form{
+        align-items: center;
+      }
+
+#captcha-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+#captcha {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#captchaInput {
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 18px;
+}
+#kl{
+
+  background-color:#003366 ;
+  color: white;
+}
+#io,#op,#mp{
+
+    background-color:#003366 ;
+    color: white;
+
+}
+#mousePosition {
+      font-size: 18px;
+      font-weight: bold;
+    }
+.qw{
+  background-color:#003366 ;
+  color: white;
+  text-align: center;
+
+}

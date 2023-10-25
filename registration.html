@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FORMS REGISTRATION</title>
+    <link rel="stylesheet" href="STYLESHEET.css">
+  </head>
+
+
+  <body id="vi">
+
+      <h4>
+    <form action="main page.html" onsubmit="return validateForm()">
+      <div class="ss">
+        <h1>REGISTRAION FORM</h1>
+
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+       <label for="dob">DATE OF BIRTH:</label>
+       <input type="date" id="dob" name="DATE OF BIRTH">
+     </div>
+     <div class="form-group">
+        <label for="college">COLLEGE NAME:</label>
+        <input type="text" id="college" name="COLLEGE NAME">
+      </div>
+      <div class="form-group">
+              <label for="department">DEPARTMENT NAME:</label>
+              <select id="department" name="DEPARTMENT NAME">
+                <option value="CYBER SECURITY">CYBER SECURITY</option>
+                <option value="COMPUTER SCIENCE">COMPUTER SCIENCE</option>
+                <option value="ELECTRONICS AND COMMUNICATION ENGINEERING">ELECTRICAL AND ELECTRONIC COMMUNICATION</option>
+                  <option value="CIVIL">CIVIL</option>
+                    <option value="ARTIFICIAL INTELLIGENCE">ARTIFICIAL INTELLIGENCE</option>
+
+
+              </select>
+            </div>
+
+            <div class="form-group">
+                    <label for="state">STATE:</label>
+                    <select id="state" name="STATE">
+                      <option value="TAMIL NADU">TAMIL NADU</option>
+                      <option value="KERALA">KERALA</option>
+                      <option value="KARNATAKA">KARNATAKA</option>
+                      <option value="GUJARAT">GUJARAT</option>
+                      <option value="RAJASTAN">RAJASTAN</option>
+
+                    </select>
+                  </div>
+
+                  <h3>CONTACT DETAILS</h3>
+
+      <div class="form-group">
+        <label for="address">ADDRESS:</label>
+        <input type="text" id="address" name="address">
+      </div>
+
+      <div class="form-group">
+        <label for="email">EMAIL:</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">PASSWORD:</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="form-group">
+             <label for="interests">INTERESTS:</label>
+             <input type="text" id="interests" name="interests">
+           </div>
+
+
+
+
+      <h2>Enter the CAPTCHA:</h2>
+      <p id="captcha"></p>
+      <input type="text" id="captchaInput" required>
+      <p id="captchaResult"></p>
+      <button type="submit">Submit</button>
+      <div id="mousePosition"></div>
+    </form>
+    <script type="text/javascript">
+      window.onload = function () {
+        generateCaptcha();
+      }
+
+      function generateCaptcha() {
+        const captcha = generateRandomCaptcha();
+        const captchaElement = document.getElementById("captcha");
+        captchaElement.innerText = captcha;
+      }
+
+      function generateRandomCaptcha() {
+        const min = 1000;
+        const max = 9999;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function validateForm() {
+
+        const username = document.getElementById("username").value;
+
+
+        if (!username) {
+          alert("Username is required.");
+          return false;
+        }
+        const captcha = document.getElementById("captcha").innerText;
+        const userInput = document.getElementById("captchaInput").value;
+        const captchaResult = document.getElementById("captchaResult");
+
+        if (userInput === captcha) {
+          captchaResult.innerText = "CAPTCHA is valid!";
+          return true;
+        } else {
+          captchaResult.innerText = "CAPTCHA is invalid. Please try again.";
+          generateCaptcha();
+          return false;
+        }
+      }
+      const mousePosition = document.getElementById("mousePosition");
+
+    document.onmousemove = function(event) {
+      const x = event.clientX;
+      const y = event.clientY;
+      mousePosition.textContent = `Mouse Position: X ${x}px, Y ${y}px`;
+    };
+    </script>
+    <form action="main page.html"> <button type=“submit”>GO TO HOME PAGE</button>
+    </FORM>
+
+  </body>
+</html>
